@@ -16,6 +16,7 @@ analysator.connect(audioCtx.destination);
 analysator.fftSize=64
 const buffer = analysator.frequencyBinCount;
 const dataArray = new Uint8Array(buffer);
+let colorArray = ["rgb(248,169,196)","rgb(255,243,1)"];
 
 function Draw(){
     analysator.getByteFrequencyData(dataArray);
@@ -23,8 +24,8 @@ function Draw(){
     const barWidth = (background.width/buffer);
     let x=0;
     for(i=0;i<buffer;i++){
-        const barHeight = dataArray[i]*2;
-        ctx.fillStyle = "lime";
+        const barHeight = dataArray[i];
+        ctx.fillStyle = colorArray[i%colorArray.length];
         ctx.fillRect(x,background.height-barHeight,barWidth-2,barHeight);
         x+=barWidth;
     }   
