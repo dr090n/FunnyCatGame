@@ -1,0 +1,44 @@
+<head>
+    <meta charset="UTF-8">
+</head>
+<div id="main" style="overflow: hidden;position: absolute; left: 0; top: 0; width: 100%; height: 100%;">
+    <div id="menu" style="overflow: hidden;position: absolute; left: 0; top: 0;">
+        <div id="buttons" style="background-color: aquamarine; top: 0;left: 0; position: absolute; width: 100%; height: 50; display: flex;overflow-y: hidden; overflow-x: auto;"></div>
+        <div id="menu-content" style="background-color:gray; position: absolute; left: 0; top: 50; width: 100%; height: 100%;">
+        </div>
+    </div>
+
+    <div id="canvas" style="background-color: black; overflow: hidden;position: absolute; left: 0; top: 0;">
+        <canvas id="background" style="position: absolute;left: 0; top: 0; z-index: 0;"></canvas>
+        <p id="cat-now" style=" 
+            user-select: none;
+            color: white;
+            font-size: 30px;
+            font-family: sans-serif;
+            position: absolute;
+            top: -10;
+            height: 0;
+            width: auto;
+            left: 50%;
+            transform: translate(-50%, 0);
+        "></p>
+        <p id="score" style=" 
+            user-select: none;
+            color: white;
+            font-size: 50px;
+            font-family: sans-serif;
+            position: absolute;
+            top: 10;
+            height: 0;
+            width: auto;
+            left: 50%;
+            transform: translate(-50%, 0);
+        "></p>
+    </div>
+    <audio preload="auto"  id="music" src="AIRWAVES.ogg" loop type="audio/ogg"></audio>
+</div>
+
+<script src="main.js"></script>
+<script src="friends.js"></script>
+<script src="background.js"></script>
+<script src="setting.js"></script>
