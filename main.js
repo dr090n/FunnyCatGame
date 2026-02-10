@@ -59,7 +59,7 @@
     //restart
     function Restart(){
         score=0;
-        localStorage.setItem('score', score); 
+        window.localStorage.clear();
     }
 
     //load
